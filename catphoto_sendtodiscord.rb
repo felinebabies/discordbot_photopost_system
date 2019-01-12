@@ -1,5 +1,6 @@
 require 'bundler'
 Bundler.require
+require 'fileutils'
 
 Dotenv.load
 
@@ -32,6 +33,9 @@ if ch_id != nil then
 
         sleep 2
     end
+
+    # 画像を削除
+    FileUtils.rm_f(photos, :secure => true)
 end
 
 bot.sync
