@@ -31,13 +31,12 @@ if ch_id != nil then
     photos.each do |additem|
         post_photo(bot, ch_id, additem, File.basename(additem))
 
-        sleep 2
+        sleep 3
     end
 
     # 画像を削除
     FileUtils.rm_f(photos, :secure => true)
 end
 
-bot.sync
 bot.stop
 
