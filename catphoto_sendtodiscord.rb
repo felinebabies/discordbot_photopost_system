@@ -35,7 +35,7 @@ if ch_id != nil then
     end
 
     # 画像を削除
-    FileUtils.rm_f(photos, :secure => true)
+    FileUtils.rm_f(photos)
 end
 
 bot.stop
